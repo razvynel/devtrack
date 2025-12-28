@@ -15,6 +15,24 @@ services:
     volumes:
       - mongo_data:/data/db
 
+  prometheus:
+    image: prom/prometheus
+    restart: unless-stopped
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    depends_on:
+      - backend
+
+  grafana:
+    image: grafana/grafana
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    depends_on:
+      - prometheus
+
 volumes:
   mongo_data:
 

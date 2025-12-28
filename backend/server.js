@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const client = require("prom-client");
 
 const authRoutes = require("./routes/auth");
 const authMiddleware = require("./middleware/auth");
@@ -17,6 +18,10 @@ if (!MONGO_URI) {
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// 🔹 Prometheus metrics
+const collectDefaultMetrics = client.collectDefaultMetrics;
+collectDefaultMetrics();
 
 // MongoDB connection with retry
 const connectWithRetry = () => {
@@ -47,6 +52,11 @@ app.get("/health", (req, res) => {
     status: "ok",
     dbState: mongoose.connection.readyState,
   });
+});
+
+app.get("/metrics", async (req, res) => {
+  res.set("Content-Type", client.register.contentType);
+  res.end(await client.register.metrics());
 });
 
 // Start server
