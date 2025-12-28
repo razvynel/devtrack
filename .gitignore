@@ -1,3 +1,14 @@
 node_modules
 .env
 mongo_data
+*.pem
+*.key
+certbot/
+.DS_Store
+*.log
+
+
+
+
+
+
