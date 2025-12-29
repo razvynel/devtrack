@@ -14,7 +14,7 @@ The application is deployed on AWS EC2 and is accessible via the following URLs:
 ### Monitoring
 - **Prometheus UI:** http://54.93.96.222:9090
 - **Backend metrics:** http://54.93.96.222/api/metrics
-- **Grafana UI:** http://grafana.54.93.96.222.nip.io
+- **Grafana UI:** http://grafana.54.93.96.222.nip.io (for viewer U/P: test/test)
 
 > Note: HTTPS (SSL) setup with Let's Encrypt is planned as a follow-up step.
 
