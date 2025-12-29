@@ -1,4 +1,35 @@
-# DevTrack 🚀
+## 🌍 Live URLs
+
+The application is deployed on AWS EC2 and is accessible via the following URLs:
+
+### Frontend
+- **Public UI:** http://54.93.96.222
+
+### Backend API (via Nginx)
+- **Health check:** http://54.93.96.222/api/health
+- **Register:** POST http://54.93.96.222/api/auth/register
+- **Login:** POST http://54.93.96.222/api/auth/login
+- **Protected route:** GET http://54.93.96.222/api/protected
+
+### Monitoring
+- **Prometheus UI:** http://54.93.96.222:9090
+- **Backend metrics:** http://54.93.96.222/api/metrics
+- **Grafana UI:** http://grafana.54.93.96.222.nip.io
+
+> Note: HTTPS (SSL) setup with Let's Encrypt is planned as a follow-up step.
+
+---
+
+## 🧠 Key Takeaways
+
+- Deployed a full-stack application on **AWS EC2**
+- Used **Docker Compose** for service orchestration
+- Configured **Nginx** as a reverse proxy for frontend and API
+- Implemented **JWT authentication**
+- Added **monitoring with Prometheus and Grafana**
+
+
+DevTrack 🚀
 
 DevTrack is a full-stack web application built to demonstrate a complete authentication flow, frontend-backend integration, containerization, and application monitoring.
 
@@ -94,47 +125,6 @@ Open: http://localhost:5500/index.html
 ## 📌 Author
 
 Razvan Dragomiroiu
-
-
-
-
-
-
-## 🌍 Live URLs
-
-The application is deployed on AWS EC2 and is accessible via the following URLs:
-
-### Frontend
-- **Public UI:** http://54.93.96.222
-
-### Backend API (via Nginx)
-- **Health check:** http://54.93.96.222/api/health
-- **Register:** POST http://54.93.96.222/api/auth/register
-- **Login:** POST http://54.93.96.222/api/auth/login
-- **Protected route:** GET http://54.93.96.222/api/protected
-
-### Monitoring
-- **Prometheus UI:** http://54.93.96.222:9090
-- **Backend metrics:** http://54.93.96.222/api/metrics
-- **Grafana UI:** http://grafana.54.93.96.222.nip.io
-
-> Note: HTTPS (SSL) setup with Let's Encrypt is planned as a follow-up step.
-
----
-
-## 🧠 Key Takeaways
-
-- Deployed a full-stack application on **AWS EC2**
-- Used **Docker Compose** for service orchestration
-- Configured **Nginx** as a reverse proxy for frontend and API
-- Implemented **JWT authentication**
-- Added **monitoring with Prometheus and Grafana**
-
----
-
-## 👤 Author
-
-**Razvan Dragomiroiu**
 
 This project was built as a hands-on portfolio project to demonstrate real-world full-stack deployment and DevOps practices.
 
