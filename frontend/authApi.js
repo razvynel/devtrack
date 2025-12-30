@@ -18,3 +18,12 @@ export async function login(email, password) {
   return res.json();
 }
 
+export async function getProtected(token) {
+  const res = await fetch(`${API_URL}/protected`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return res.json();
+}
+

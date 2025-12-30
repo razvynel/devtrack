@@ -1,4 +1,4 @@
-import { getProtected } from "./api/authApi.js";
+import { getProtected } from "./authApi.js";
 
 console.log("dashboard.js loaded");
 

@@ -1,4 +1,4 @@
-import { login, register } from "./api/authApi.js";
+import { login, register } from "./authApi.js";
 import { setMessage, setLoading } from "./utils/dom.js";
 
 const message = document.getElementById("message");
